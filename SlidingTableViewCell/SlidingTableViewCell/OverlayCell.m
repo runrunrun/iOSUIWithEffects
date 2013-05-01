@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) UIView *overlayView;
 @property (nonatomic, assign) BOOL isFullOverlay;
+@property (nonatomic, assign) CGFloat firstX;
+@property (nonatomic, assign) CGFloat firstY;
 
 @end
 
@@ -52,11 +54,9 @@
     
     _overlayView.backgroundColor = [UIColor redColor];
  
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleOverlay)];
-    
-    tapRecognizer.delegate = self;
-    
-    [_overlayView addGestureRecognizer:tapRecognizer];    
+    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panOverlay:)];
+    panRecognizer.delegate = self;
+    [_overlayView addGestureRecognizer:panRecognizer];
 }
 
 - (void)setupDescriptionLabel
@@ -67,6 +67,16 @@
 }
 
 #pragma mark - Frame calculations
+
+- (CGRect)overlayViewFrameWithHorizontalTranslation:(CGFloat)translation
+{
+    CGFloat x = 0.0f;
+    CGFloat y = 0.0f;
+    CGFloat width = 50.0f + translation;
+    CGFloat height = CGRectGetHeight(self.frame);
+    
+    return CGRectMake(x, y, width, height);
+}
 
 - (CGRect)overlayViewFrame
 {
@@ -91,23 +101,43 @@
 
 #pragma mark - UITapGestureRecognizer action
 
-- (void)toggleOverlay
+- (void)panOverlay:(id)sender
 {
-    _isFullOverlay = !_isFullOverlay;
+    
+	[self bringSubviewToFront:[(UIPanGestureRecognizer*)sender view]];
 
-    void (^animation) (void) = ^(void){
-        _overlayView.frame = [self overlayViewFrame];
-    };
     
-    void (^completions) (BOOL finished) = ^(BOOL finished){
-    };
+    CGPoint translatedPoint = [(UIPanGestureRecognizer *)sender translationInView:self];
     
-    [UIView animateWithDuration:0.5f
-                          delay:0.0f
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:animation
-                    completion:completions
-     ];
+    if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
+        _firstX = [[sender view] center].x;
+        _firstY = [[sender view] center].y;
+    }
+    
+    translatedPoint = CGPointMake(_firstX+translatedPoint.x, _firstY);
+    
+    [[sender view] setCenter:translatedPoint];
+    
+//    CGFloat xTranslation = translatedPoint.x - _firstX;
+
+//    CGRect translatedFrame = [self overlayViewFrameWithHorizontalTranslation:xTranslation];
+//    
+//    [[sender view] setBounds:translatedFrame];
+
+    
+//    void (^animation) (void) = ^(void){
+//        _overlayView.frame = [self overlayViewFrameWithHorizontalTranslation:xTranslation];
+//    };
+//    
+//    void (^completions) (BOOL finished) = ^(BOOL finished){
+//    };
+//    
+//    [UIView animateWithDuration:0.5f
+//                          delay:0.0f
+//                        options:UIViewAnimationOptionCurveEaseInOut
+//                     animations:animation
+//                    completion:completions
+//     ];
 }
 
 @end

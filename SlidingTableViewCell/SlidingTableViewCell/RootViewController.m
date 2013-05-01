@@ -47,8 +47,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    NSString *cellIdentifier = [NSString stringWithFormat:@"%d%d",indexPath.section, indexPath.row];//inefficent solution not for real apps
+    NSString *cellIdentifier = [NSString stringWithFormat:@"%d%d",indexPath.section, indexPath.row];
+    //inefficent solution not for real apps
     
     OverlayCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
@@ -57,8 +57,6 @@
     }
     
     cell.descriptionLabel.text = [NSString stringWithFormat:@"Section : %d, Row : %d", indexPath.section, indexPath.row];
-    
-    
     
     return cell;
 }
@@ -87,6 +85,5 @@
 {
     
 }
-
 
 @end
