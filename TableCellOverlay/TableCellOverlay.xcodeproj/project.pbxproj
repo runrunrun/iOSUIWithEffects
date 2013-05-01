@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0382811730B1F60087026A /* OverlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0382801730B1F60087026A /* OverlayCell.m */; };
 		1E26CDA217300D7D00DE0703 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E26CDA117300D7D00DE0703 /* UIKit.framework */; };
 		1E26CDA417300D7D00DE0703 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E26CDA317300D7D00DE0703 /* Foundation.framework */; };
 		1E26CDA617300D7D00DE0703 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E26CDA517300D7D00DE0703 /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E03827F1730B1F60087026A /* OverlayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayCell.h; sourceTree = "<group>"; };
+		1E0382801730B1F60087026A /* OverlayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayCell.m; sourceTree = "<group>"; };
 		1E26CD9E17300D7D00DE0703 /* TableCellOverlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableCellOverlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E26CDA117300D7D00DE0703 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1E26CDA317300D7D00DE0703 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +91,8 @@
 				1E26CDBE17300DA800DE0703 /* RootViewController.h */,
 				1E26CDBF17300DA800DE0703 /* RootViewController.m */,
 				1E26CDC017300DA800DE0703 /* RootViewController.xib */,
+				1E03827F1730B1F60087026A /* OverlayCell.h */,
+				1E0382801730B1F60087026A /* OverlayCell.m */,
 				1E26CDA817300D7D00DE0703 /* Supporting Files */,
 			);
 			path = TableCellOverlay;
@@ -176,6 +181,7 @@
 				1E26CDAE17300D7D00DE0703 /* main.m in Sources */,
 				1E26CDB217300D7D00DE0703 /* AppDelegate.m in Sources */,
 				1E26CDC117300DA800DE0703 /* RootViewController.m in Sources */,
+				1E0382811730B1F60087026A /* OverlayCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +298,7 @@
 				1E26CDBD17300D7D00DE0703 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
