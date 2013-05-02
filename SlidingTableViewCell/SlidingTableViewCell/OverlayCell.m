@@ -58,6 +58,7 @@
  
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panOverlay:)];
     panRecognizer.delegate = self;
+    
     [_overlayView addGestureRecognizer:panRecognizer];
     
     _overlayView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
@@ -177,5 +178,17 @@
      ];
     
 }
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer;
+{
+    CGPoint velocity = [(UIPanGestureRecognizer *)gestureRecognizer velocityInView:self];
+
+    NSLog(@"%f  %f", velocity.y, velocity.x);
+    
+    BOOL panningHorizontal = (fabs(velocity.x) > fabs(velocity.y)) ? YES : NO;
+        
+    return panningHorizontal;
+}
+
 
 @end
