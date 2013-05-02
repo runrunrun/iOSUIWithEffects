@@ -35,7 +35,7 @@
     _tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    
+        
     [self.view addSubview:_tableView];
 }
 
@@ -54,6 +54,7 @@
     
     if(cell == nil){
         cell = [[OverlayCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     cell.descriptionLabel.text = [NSString stringWithFormat:@"Section : %d, Row : %d", indexPath.section, indexPath.row];

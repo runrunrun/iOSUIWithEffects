@@ -7,8 +7,10 @@
 //
 
 #import "OverlayCell.h"
+#import <QuartzCore/QuartzCore.h>
 
-#define PARTIAL_OVERLAY_WIDTH 50.0f;
+#define PARTIAL_OVERLAY_WIDTH 50.0f
+#define OVERLAY_MAX_TRANSLATION 100.0F
 
 @interface OverlayCell ()
 
@@ -25,11 +27,12 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self setupDescriptionLabel];
-        [self addSubview:_descriptionLabel];
 
         [self setupOverlay];
         [self addSubview:_overlayView];
+        
+        [self setupDescriptionLabel];
+        [_overlayView addSubview:_descriptionLabel];
 
     }
     return self;
@@ -44,7 +47,6 @@
 {
     [super layoutSubviews];
     
-    _overlayView.frame = [self overlayViewFrame];
     _descriptionLabel.frame = [self descriptionLabelFrame];
 }
 
@@ -52,18 +54,22 @@
 {
     _overlayView = [[UIView alloc] init];
     
-    _overlayView.backgroundColor = [UIColor redColor];
+    _overlayView.backgroundColor = [UIColor blueColor];
  
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panOverlay:)];
     panRecognizer.delegate = self;
     [_overlayView addGestureRecognizer:panRecognizer];
+    
+    _overlayView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    _overlayView.contentMode = UIViewContentModeScaleToFill;
+    _overlayView.frame = [self overlayViewFrame];
 }
 
 - (void)setupDescriptionLabel
 {
     _descriptionLabel = [[UILabel alloc] init];
-    
-    _descriptionLabel.textAlignment = NSTextAlignmentCenter;
+    _descriptionLabel.backgroundColor = [UIColor clearColor];
+    _descriptionLabel.textAlignment = NSTextAlignmentCenter;    
 }
 
 #pragma mark - Frame calculations
@@ -82,7 +88,7 @@
 {
     CGFloat x = 0.0f;
     CGFloat y = 0.0f;
-    CGFloat width = _isFullOverlay ? CGRectGetWidth(self.frame) : PARTIAL_OVERLAY_WIDTH;
+    CGFloat width =  CGRectGetWidth(self.frame);
     CGFloat height = CGRectGetHeight(self.frame);
     
     return CGRectMake(x, y, width, height);
@@ -90,33 +96,47 @@
 
 - (CGRect)descriptionLabelFrame
 {
-    CGFloat padding = 5.0f;
-    CGFloat x = padding;
-    CGFloat y = padding;
-    CGFloat width = CGRectGetWidth(self.frame) - 2*padding;
-    CGFloat height = CGRectGetHeight(self.frame) - 2*padding;
-    
-    return CGRectMake(x, y, width, height);
+    return _overlayView.bounds;
 }
 
 #pragma mark - UITapGestureRecognizer action
 
 - (void)panOverlay:(id)sender
 {
+    UIView *overlay = [sender view];
     
-	[self bringSubviewToFront:[(UIPanGestureRecognizer*)sender view]];
-
     
     CGPoint translatedPoint = [(UIPanGestureRecognizer *)sender translationInView:self];
     
     if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
-        _firstX = [[sender view] center].x;
-        _firstY = [[sender view] center].y;
+        _firstX = [overlay center].x;
+        _firstY = [overlay center].y;
     }
     
     translatedPoint = CGPointMake(_firstX+translatedPoint.x, _firstY);
     
-    [[sender view] setCenter:translatedPoint];
+    CGFloat translation = translatedPoint.x - _firstX;
+    
+//    BOOL isPaningOutOfRightBound = overlay.center.x < _firstX;
+    
+//    if(isPaningOutOfRightBound){
+//        if(overlay.frame.origin.x > OVERLAY_MAX_TRANSLATION) {
+//            [overlay setCenter:CGPointMake(OVERLAY_MAX_TRANSLATION, _firstY)];
+//        }
+//        else{
+            [overlay setCenter:translatedPoint];
+//        }
+//    }
+    
+    if([(UIPanGestureRecognizer *)sender state] == UIGestureRecognizerStateEnded){
+        BOOL isOverlayOutOfBounds = overlay.frame.origin.x > OVERLAY_MAX_TRANSLATION;
+        
+        if(isOverlayOutOfBounds){
+            CGPoint position = CGPointMake(160.0f, _firstY);
+            [self animateOverlayToPosition:(CGPoint)position];
+        }
+        
+    }
     
 //    CGFloat xTranslation = translatedPoint.x - _firstX;
 
@@ -138,6 +158,24 @@
 //                     animations:animation
 //                    completion:completions
 //     ];
+}
+
+- (void)animateOverlayToPosition:(CGPoint)position
+{
+    void (^animation) (void) = ^(void){
+        _overlayView.center = position;
+    };
+
+    void (^completions) (BOOL finished) = ^(BOOL finished){
+    };
+
+    [UIView animateWithDuration:0.5f
+                          delay:0.0f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:animation
+                    completion:completions
+     ];
+    
 }
 
 @end
