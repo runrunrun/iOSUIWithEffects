@@ -17,9 +17,7 @@
 @property (nonatomic, strong) UIButton *buttonOne;
 @property (nonatomic, strong) UIButton *buttonTwo;
 @property (nonatomic, assign) BOOL isOverlayPinned;
-@property (nonatomic, assign) CGFloat firstX;
-@property (nonatomic, assign) CGFloat firstY;
-
+@property (nonatomic, assign) CGPoint gestureStartPoint;
 
 @end
 
@@ -156,32 +154,32 @@
 
 #pragma mark - UITapGestureRecognizer action
 
-- (void)panOverlay:(id)sender
+- (void)panOverlay:(UIPanGestureRecognizer *)sender
 {
     UIView *overlay = [sender view];
     
-    CGPoint translatedPoint = [(UIPanGestureRecognizer *)sender translationInView:self];
+    UIGestureRecognizerState gestureState = [sender state];
     
-    if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
-        _firstX = [overlay center].x ;
-        _firstY = [overlay center].y;
+    if(gestureState == UIGestureRecognizerStateBegan) {
+        _gestureStartPoint = overlay.center ;
     }
     
-    translatedPoint = CGPointMake(_firstX+translatedPoint.x, _firstY);
+    CGPoint translatedPoint = [sender translationInView:self];
+    translatedPoint = CGPointMake(_gestureStartPoint.x+translatedPoint.x, _gestureStartPoint.y);
     [overlay setCenter:translatedPoint];
     
-    if([(UIPanGestureRecognizer *)sender state] == UIGestureRecognizerStateEnded){
+    if(gestureState == UIGestureRecognizerStateEnded){
         
         BOOL shouldPinOverlay = overlay.frame.origin.x > OVERLAY_PIN_POSITION_X;
             
         CGPoint position;
         
         if(shouldPinOverlay){
-           position = CGPointMake(self.center.x + OVERLAY_PIN_POSITION_X, _firstY);
+           position = CGPointMake(self.center.x + OVERLAY_PIN_POSITION_X, _gestureStartPoint.y);
             _isOverlayPinned = YES;
         }
         else {
-            position = CGPointMake(self.center.x, _firstY);
+            position = CGPointMake(self.center.x, _gestureStartPoint.y);
         }
         
         [self animateOverlayCenterToPosition:(CGPoint)position];
@@ -205,6 +203,8 @@
      ];
     
 }
+
+#pragma mark - UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer;
 {
