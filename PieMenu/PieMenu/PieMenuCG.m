@@ -65,23 +65,37 @@
 
 - (void)menuTapped:(UITapGestureRecognizer *)tapGesture
 {
-    self.frame = [self toggleFrame];
+//    self.frame = [self toggleFrame];
+//    CGRect bounds = self.bounds;
+//    bounds.size.width = 2 * bounds.size.width;
+//    bounds.size.height = 2 * bounds.size.height;
+//
+//    _menuOuterCircle.bounds = bounds;
+        
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
+//    animation.fromValue = (__bridge id)[[UIBezierPath bezierPathWithOvalInRect:self.bounds] CGPath];
+    animation.toValue = (id)[UIBezierPath bezierPathWithOvalInRect:[self menuFrame]].CGPath;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [_menuOuterCircle addAnimation:animation forKey:@"path"];
     
-//    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
-////    animation.fromValue = (__bridge id)[[UIBezierPath bezierPathWithOvalInRect:self.bounds] CGPath];
-//    animation.toValue = (id)[UIBezierPath bezierPathWithOvalInRect:[self menuFrame]].CGPath;
-//    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//    [_menuOuterCircle addAnimation:animation forKey:@"path"];
+    _menuOuterCircle.path = [UIBezierPath bezierPathWithOvalInRect:[self menuFrame]].CGPath;
 }
+
 
 - (CGRect)menuFrame
 {
-    return self.bounds;
+    BOOL openMenu = (CGRectGetWidth(self.bounds) >= 2*_closedMenuSize.width);
+    CGFloat width = openMenu ? _closedMenuSize.width : 2 * _closedMenuSize.width;
+    CGFloat height = width;
+    CGFloat x = CGRectGetMidX(self.bounds) - width/2;
+    CGFloat y = CGRectGetMidY(self.bounds) - height/2;
+    
+    return CGRectMake(x, y, width, height);
 }
 
 - (CGRect)toggleFrame
 {
-    CGFloat width = (CGRectGetWidth(self.bounds) > 3*_closedMenuSize.width) ? CGRectGetWidth(self.bounds)/2 : 2*CGRectGetWidth(self.bounds);
+    CGFloat width = (CGRectGetWidth(self.bounds) >= 2*_closedMenuSize.width) ? _closedMenuSize.width : 2*_closedMenuSize.width;
     CGFloat height = width;
     CGFloat x = CGRectGetMidX(self.frame) - width/2;
     CGFloat y = CGRectGetMidY(self.frame) - height/2;
