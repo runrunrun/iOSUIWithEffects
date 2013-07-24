@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EAEBF47179B64B800B069CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAEBF46179B64B800B069CE /* UIKit.framework */; };
+		1EAEBF49179B64B800B069CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAEBF48179B64B800B069CE /* Foundation.framework */; };
+		1EAEBF4B179B64B800B069CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAEBF4A179B64B800B069CE /* CoreGraphics.framework */; };
+		1EAEBF51179B64B800B069CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EAEBF4F179B64B800B069CE /* InfoPlist.strings */; };
+		1EAEBF53179B64B800B069CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEBF52179B64B800B069CE /* main.m */; };
+		1EAEBF57179B64B900B069CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEBF56179B64B900B069CE /* AppDelegate.m */; };
+		1EAEBF59179B64B900B069CE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAEBF58179B64B900B069CE /* Default.png */; };
+		1EAEBF5B179B64B900B069CE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAEBF5A179B64B900B069CE /* Default@2x.png */; };
+		1EAEBF5D179B64B900B069CE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAEBF5C179B64B900B069CE /* Default-568h@2x.png */; };
+		1EAEBF65179B64E500B069CE /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEBF64179B64E500B069CE /* MenuItem.m */; };
+		1EAEBF68179B64FD00B069CE /* PieMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEBF67179B64FD00B069CE /* PieMenu.m */; };
+		1EAEBF6B179B651700B069CE /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEBF6A179B651700B069CE /* RootViewController.m */; };
+		1EAEBF6E179B7FE500B069CE /* PieMenuCG.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAEBF6D179B7FE500B069CE /* PieMenuCG.m */; };
+		1EAEBF70179B8F6300B069CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAEBF6F179B8F6300B069CE /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1EAEBF43179B64B800B069CE /* PieMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PieMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EAEBF46179B64B800B069CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1EAEBF48179B64B800B069CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1EAEBF4A179B64B800B069CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1EAEBF4E179B64B800B069CE /* PieMenu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PieMenu-Info.plist"; sourceTree = "<group>"; };
+		1EAEBF50179B64B800B069CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1EAEBF52179B64B800B069CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1EAEBF54179B64B900B069CE /* PieMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PieMenu-Prefix.pch"; sourceTree = "<group>"; };
+		1EAEBF55179B64B900B069CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1EAEBF56179B64B900B069CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1EAEBF58179B64B900B069CE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1EAEBF5A179B64B900B069CE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1EAEBF5C179B64B900B069CE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1EAEBF63179B64E500B069CE /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		1EAEBF64179B64E500B069CE /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		1EAEBF66179B64FD00B069CE /* PieMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieMenu.h; sourceTree = "<group>"; };
+		1EAEBF67179B64FD00B069CE /* PieMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieMenu.m; sourceTree = "<group>"; };
+		1EAEBF69179B651700B069CE /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		1EAEBF6A179B651700B069CE /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		1EAEBF6C179B7FE500B069CE /* PieMenuCG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieMenuCG.h; sourceTree = "<group>"; };
+		1EAEBF6D179B7FE500B069CE /* PieMenuCG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieMenuCG.m; sourceTree = "<group>"; };
+		1EAEBF6F179B8F6300B069CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EAEBF40179B64B800B069CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EAEBF70179B8F6300B069CE /* QuartzCore.framework in Frameworks */,
+				1EAEBF47179B64B800B069CE /* UIKit.framework in Frameworks */,
+				1EAEBF49179B64B800B069CE /* Foundation.framework in Frameworks */,
+				1EAEBF4B179B64B800B069CE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EAEBF3A179B64B800B069CE = {
+			isa = PBXGroup;
+			children = (
+				1EAEBF4C179B64B800B069CE /* PieMenu */,
+				1EAEBF45179B64B800B069CE /* Frameworks */,
+				1EAEBF44179B64B800B069CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EAEBF44179B64B800B069CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EAEBF43179B64B800B069CE /* PieMenu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EAEBF45179B64B800B069CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EAEBF6F179B8F6300B069CE /* QuartzCore.framework */,
+				1EAEBF46179B64B800B069CE /* UIKit.framework */,
+				1EAEBF48179B64B800B069CE /* Foundation.framework */,
+				1EAEBF4A179B64B800B069CE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1EAEBF4C179B64B800B069CE /* PieMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1EAEBF55179B64B900B069CE /* AppDelegate.h */,
+				1EAEBF56179B64B900B069CE /* AppDelegate.m */,
+				1EAEBF69179B651700B069CE /* RootViewController.h */,
+				1EAEBF6A179B651700B069CE /* RootViewController.m */,
+				1EAEBF66179B64FD00B069CE /* PieMenu.h */,
+				1EAEBF67179B64FD00B069CE /* PieMenu.m */,
+				1EAEBF6C179B7FE500B069CE /* PieMenuCG.h */,
+				1EAEBF6D179B7FE500B069CE /* PieMenuCG.m */,
+				1EAEBF63179B64E500B069CE /* MenuItem.h */,
+				1EAEBF64179B64E500B069CE /* MenuItem.m */,
+				1EAEBF4D179B64B800B069CE /* Supporting Files */,
+			);
+			path = PieMenu;
+			sourceTree = "<group>";
+		};
+		1EAEBF4D179B64B800B069CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EAEBF4E179B64B800B069CE /* PieMenu-Info.plist */,
+				1EAEBF4F179B64B800B069CE /* InfoPlist.strings */,
+				1EAEBF52179B64B800B069CE /* main.m */,
+				1EAEBF54179B64B900B069CE /* PieMenu-Prefix.pch */,
+				1EAEBF58179B64B900B069CE /* Default.png */,
+				1EAEBF5A179B64B900B069CE /* Default@2x.png */,
+				1EAEBF5C179B64B900B069CE /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EAEBF42179B64B800B069CE /* PieMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EAEBF60179B64B900B069CE /* Build configuration list for PBXNativeTarget "PieMenu" */;
+			buildPhases = (
+				1EAEBF3F179B64B800B069CE /* Sources */,
+				1EAEBF40179B64B800B069CE /* Frameworks */,
+				1EAEBF41179B64B800B069CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PieMenu;
+			productName = PieMenu;
+			productReference = 1EAEBF43179B64B800B069CE /* PieMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EAEBF3B179B64B800B069CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = unknown;
+			};
+			buildConfigurationList = 1EAEBF3E179B64B800B069CE /* Build configuration list for PBXProject "PieMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1EAEBF3A179B64B800B069CE;
+			productRefGroup = 1EAEBF44179B64B800B069CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EAEBF42179B64B800B069CE /* PieMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EAEBF41179B64B800B069CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EAEBF51179B64B800B069CE /* InfoPlist.strings in Resources */,
+				1EAEBF59179B64B900B069CE /* Default.png in Resources */,
+				1EAEBF5B179B64B900B069CE /* Default@2x.png in Resources */,
+				1EAEBF5D179B64B900B069CE /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EAEBF3F179B64B800B069CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EAEBF53179B64B800B069CE /* main.m in Sources */,
+				1EAEBF57179B64B900B069CE /* AppDelegate.m in Sources */,
+				1EAEBF65179B64E500B069CE /* MenuItem.m in Sources */,
+				1EAEBF68179B64FD00B069CE /* PieMenu.m in Sources */,
+				1EAEBF6B179B651700B069CE /* RootViewController.m in Sources */,
+				1EAEBF6E179B7FE500B069CE /* PieMenuCG.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1EAEBF4F179B64B800B069CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EAEBF50179B64B800B069CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1EAEBF5E179B64B900B069CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1EAEBF5F179B64B900B069CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EAEBF61179B64B900B069CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PieMenu/PieMenu-Prefix.pch";
+				INFOPLIST_FILE = "PieMenu/PieMenu-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1EAEBF62179B64B900B069CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PieMenu/PieMenu-Prefix.pch";
+				INFOPLIST_FILE = "PieMenu/PieMenu-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EAEBF3E179B64B800B069CE /* Build configuration list for PBXProject "PieMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EAEBF5E179B64B900B069CE /* Debug */,
+				1EAEBF5F179B64B900B069CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EAEBF60179B64B900B069CE /* Build configuration list for PBXNativeTarget "PieMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EAEBF61179B64B900B069CE /* Debug */,
+				1EAEBF62179B64B900B069CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EAEBF3B179B64B800B069CE /* Project object */;
+}

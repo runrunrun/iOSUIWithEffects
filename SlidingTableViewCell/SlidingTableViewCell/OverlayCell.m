@@ -9,7 +9,7 @@
 #import "OverlayCell.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define OVERLAY_PIN_POSITION_X  70
+#define OVERLAY_PIN_POSITION_X  300
 
 @interface OverlayCell ()
 

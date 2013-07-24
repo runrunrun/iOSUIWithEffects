@@ -12,7 +12,6 @@
 
 @property (nonatomic, assign) CGPoint gestureStartPoint;
 @property (nonatomic, assign) FlipDirection flipDirection;
-@property (nonatomic, strong) UISlider *xRotationSliderView, *yRotationSliderView, *zRotationSliderView;
 @property (nonatomic, assign) float initialXRotation, initialYRotation, initialZRotation;
 
 @end
@@ -30,16 +29,6 @@
         _textLabel.backgroundColor = [UIColor clearColor];
         _textLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_textLabel];
-        
-        _xRotationSliderView = [[UISlider alloc] init];
-        _xRotationSliderView.maximumValue = 180.0f;
-        _xRotationSliderView.minimumValue = 180.0f;
-        _xRotationSliderView.value = 0.0f;
-        
-        _yRotationSliderView = [[UISlider alloc] init];
-        _yRotationSliderView.maximumValue = 180.0f;
-        _yRotationSliderView.minimumValue = 180.0f;
-        _yRotationSliderView.value = 0.0f;
         
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(flipView:)];
         [self addGestureRecognizer:pan];
@@ -61,17 +50,14 @@
     UIGestureRecognizerState state = [gesture state];
     
     if(state == UIGestureRecognizerStateBegan){
-        _initialXRotation = [self.xRotationSliderView value];
-        _initialYRotation = [self.yRotationSliderView value];
+        _initialXRotation = 0.0f;
+        _initialYRotation = 0.0f;
     }
     else if (state==UIGestureRecognizerStateChanged)
     {
         float xRotation = self.initialXRotation + translation.y;
         float yRotation = self.initialYRotation + translation.x;
         
-        [self.xRotationSliderView setValue:xRotation];
-        [self.yRotationSliderView setValue:yRotation];
-
         [self flipWithDirection:_flipDirection animated:NO];
     }
     else if(state == UIGestureRecognizerStateEnded){
