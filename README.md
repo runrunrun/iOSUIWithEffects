@@ -17,4 +17,4 @@ Slide table cell to reveal hidden content like buttons.
 Useful for hiding action items. For example buttons for sharing in twitter/facebook.
 
 - StrikethroughLabel
-Custom UILabel that allows drawing lines over UILabel text. It can used to strikethrough, underline or overline text. 
+- Custom UILabel that allows drawing lines over UILabel text. It can used to strikethrough, underline or overline text. 
