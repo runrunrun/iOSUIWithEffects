@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DoubleSliderControl.h"
 
 @interface ViewController ()
 

@@ -14,6 +14,8 @@
 		1E16942C1AE85C25004107A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E16942B1AE85C25004107A4 /* Images.xcassets */; };
 		1E16942F1AE85C25004107A4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E16942D1AE85C25004107A4 /* LaunchScreen.xib */; };
 		1E16943B1AE85C25004107A4 /* DoubleSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E16943A1AE85C25004107A4 /* DoubleSliderTests.m */; };
+		1E1694451AE85C60004107A4 /* DoubleSliderControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1694441AE85C60004107A4 /* DoubleSliderControl.xib */; };
+		1ED25BCD1AE865D900129D11 /* DoubleSliderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED25BCC1AE865D900129D11 /* DoubleSliderControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		1E1694341AE85C25004107A4 /* DoubleSliderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleSliderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1694391AE85C25004107A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E16943A1AE85C25004107A4 /* DoubleSliderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleSliderTests.m; sourceTree = "<group>"; };
+		1E1694441AE85C60004107A4 /* DoubleSliderControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoubleSliderControl.xib; sourceTree = "<group>"; };
+		1ED25BCB1AE865D900129D11 /* DoubleSliderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleSliderControl.h; sourceTree = "<group>"; };
+		1ED25BCC1AE865D900129D11 /* DoubleSliderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleSliderControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,9 @@
 				1E1694231AE85C25004107A4 /* AppDelegate.m */,
 				1E1694251AE85C25004107A4 /* ViewController.h */,
 				1E1694261AE85C25004107A4 /* ViewController.m */,
+				1ED25BCB1AE865D900129D11 /* DoubleSliderControl.h */,
+				1ED25BCC1AE865D900129D11 /* DoubleSliderControl.m */,
+				1E1694441AE85C60004107A4 /* DoubleSliderControl.xib */,
 				1E1694281AE85C25004107A4 /* Main.storyboard */,
 				1E16942B1AE85C25004107A4 /* Images.xcassets */,
 				1E16942D1AE85C25004107A4 /* LaunchScreen.xib */,
@@ -202,6 +210,7 @@
 				1E16942A1AE85C25004107A4 /* Main.storyboard in Resources */,
 				1E16942F1AE85C25004107A4 /* LaunchScreen.xib in Resources */,
 				1E16942C1AE85C25004107A4 /* Images.xcassets in Resources */,
+				1E1694451AE85C60004107A4 /* DoubleSliderControl.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +231,7 @@
 				1E1694271AE85C25004107A4 /* ViewController.m in Sources */,
 				1E1694241AE85C25004107A4 /* AppDelegate.m in Sources */,
 				1E1694211AE85C25004107A4 /* main.m in Sources */,
+				1ED25BCD1AE865D900129D11 /* DoubleSliderControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +424,7 @@
 				1E1694401AE85C25004107A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E1694411AE85C25004107A4 /* Build configuration list for PBXNativeTarget "DoubleSliderTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +433,7 @@
 				1E1694431AE85C25004107A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
