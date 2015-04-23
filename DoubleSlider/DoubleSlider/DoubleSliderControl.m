@@ -17,9 +17,19 @@
 }
 
 - (void)awakeFromNib {
-    [self addSubview:[[[NSBundle mainBundle] loadNibNamed:@"DoubleSliderControl" owner:self options:nil] objectAtIndex:0]];
+    UIView *sliderView = [[[NSBundle mainBundle] loadNibNamed:@"DoubleSliderControl" owner:self options:nil] objectAtIndex:0];
+    sliderView.frame = self.bounds;
+    
+    sliderView.layer.borderColor = [[UIColor greenColor] CGColor];
+    sliderView.layer.borderWidth = 3.0f;
+    
+    [self addSubview:sliderView];
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+}
 
 
 @end

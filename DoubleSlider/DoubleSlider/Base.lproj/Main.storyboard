@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,18 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvt-Do-qdO" customClass="DoubleSliderControl">
-                                <rect key="frame" x="20" y="30" width="200" height="100"/>
+                                <rect key="frame" x="36" y="28" width="528" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="XlW-Jb-93w"/>
-                                    <constraint firstAttribute="width" constant="200" id="hwa-Kn-wJ0"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cvt-Do-qdO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="Fxd-GV-DcX"/>
-                            <constraint firstItem="cvt-Do-qdO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="oPr-9n-tJB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cvt-Do-qdO" secondAttribute="trailing" constant="20" id="QaE-z1-sJk"/>
+                            <constraint firstAttribute="centerX" secondItem="cvt-Do-qdO" secondAttribute="centerX" id="QuS-bd-xko"/>
+                            <constraint firstItem="cvt-Do-qdO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Yf0-VA-FiB"/>
+                            <constraint firstItem="cvt-Do-qdO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uzn-uw-aLA"/>
                         </constraints>
                     </view>
                 </viewController>

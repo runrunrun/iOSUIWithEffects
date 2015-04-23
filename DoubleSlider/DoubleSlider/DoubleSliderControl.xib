@@ -24,8 +24,14 @@
                         <constraint firstAttribute="height" constant="3" id="PgE-pe-lbc"/>
                     </constraints>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SliderTrack" translatesAutoresizingMaskIntoConstraints="NO" id="T1n-wA-hXq">
+                    <rect key="frame" x="31" y="48" width="171" height="3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="5mX-T4-4yq"/>
+                    </constraints>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dag-Pe-iec" userLabel="leftSlider">
-                    <rect key="frame" x="59" y="38" width="23" height="23"/>
+                    <rect key="frame" x="10" y="38" width="23" height="23"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="23" id="3Ne-rn-hdx"/>
                         <constraint firstAttribute="height" constant="23" id="HbT-ro-qmQ"/>
@@ -46,26 +52,21 @@
                     </state>
                     <state key="highlighted" image="SliderHandleHighlighted"/>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SliderTrack" translatesAutoresizingMaskIntoConstraints="NO" id="T1n-wA-hXq">
-                    <rect key="frame" x="80" y="48" width="122" height="3"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="3" id="5mX-T4-4yq"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="0.19055343829999999" blue="0.1169614172" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="rGv-MY-0TW" firstAttribute="leading" secondItem="T1n-wA-hXq" secondAttribute="trailing" constant="-2" id="8mM-0X-dQa"/>
                 <constraint firstAttribute="centerY" secondItem="0Pb-fH-mV3" secondAttribute="centerY" id="E4K-sw-4cc"/>
                 <constraint firstItem="0Pb-fH-mV3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EFM-bo-CzK"/>
-                <constraint firstItem="rGv-MY-0TW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="200" id="Hmi-Nk-HBq"/>
+                <constraint firstItem="rGv-MY-0TW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="750" constant="200" id="Hmi-Nk-HBq"/>
                 <constraint firstAttribute="trailing" secondItem="0Pb-fH-mV3" secondAttribute="trailing" id="gSo-t2-kWA"/>
                 <constraint firstItem="T1n-wA-hXq" firstAttribute="height" secondItem="0Pb-fH-mV3" secondAttribute="height" id="isP-1H-bNT"/>
                 <constraint firstAttribute="centerY" secondItem="T1n-wA-hXq" secondAttribute="centerY" id="oJa-MT-wNA"/>
                 <constraint firstItem="T1n-wA-hXq" firstAttribute="leading" secondItem="dag-Pe-iec" secondAttribute="trailing" constant="-2" id="sZ8-TI-Vhk"/>
-                <constraint firstItem="dag-Pe-iec" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="59" id="u96-Ys-INd"/>
+                <constraint firstItem="dag-Pe-iec" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="u96-Ys-INd"/>
                 <constraint firstItem="0Pb-fH-mV3" firstAttribute="centerY" secondItem="dag-Pe-iec" secondAttribute="centerY" id="vnH-fi-yay"/>
                 <constraint firstItem="rGv-MY-0TW" firstAttribute="centerY" secondItem="0Pb-fH-mV3" secondAttribute="centerY" id="vw7-RG-sCs"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rGv-MY-0TW" secondAttribute="trailing" id="xRT-Xz-YU5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="209.5" y="80"/>
