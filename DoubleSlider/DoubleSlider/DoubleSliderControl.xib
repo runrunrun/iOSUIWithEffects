@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoubleSliderControl">
             <connections>
                 <outlet property="_leftSlider" destination="dag-Pe-iec" id="LrJ-ec-vfE"/>
-                <outlet property="_leftSliderLeadingConstraint" destination="u96-Ys-INd" id="0rR-OY-B2w"/>
+                <outlet property="_leftSliderLeadingConstraint" destination="Oxu-yW-tSR" id="aPQ-vI-a8Q"/>
                 <outlet property="_rightSlider" destination="rGv-MY-0TW" id="2Qh-t5-THL"/>
                 <outlet property="_rightSliderLeadingConstraint" destination="Hmi-Nk-HBq" id="Q83-NS-ghR"/>
                 <outlet property="_sliderTrackBackground" destination="0Pb-fH-mV3" id="ET9-RP-vbP"/>
@@ -25,13 +25,13 @@
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SliderTrack" translatesAutoresizingMaskIntoConstraints="NO" id="T1n-wA-hXq">
-                    <rect key="frame" x="31" y="48" width="171" height="3"/>
+                    <rect key="frame" x="41" y="48" width="161" height="3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="3" id="5mX-T4-4yq"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dag-Pe-iec" userLabel="leftSlider">
-                    <rect key="frame" x="10" y="38" width="23" height="23"/>
+                    <rect key="frame" x="20" y="38" width="23" height="23"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="23" id="3Ne-rn-hdx"/>
                         <constraint firstAttribute="height" constant="23" id="HbT-ro-qmQ"/>
@@ -55,21 +55,24 @@
             </subviews>
             <color key="backgroundColor" red="1" green="0.19055343829999999" blue="0.1169614172" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="dag-Pe-iec" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" id="8JY-AK-q8q"/>
                 <constraint firstItem="rGv-MY-0TW" firstAttribute="leading" secondItem="T1n-wA-hXq" secondAttribute="trailing" constant="-2" id="8mM-0X-dQa"/>
                 <constraint firstAttribute="centerY" secondItem="0Pb-fH-mV3" secondAttribute="centerY" id="E4K-sw-4cc"/>
                 <constraint firstItem="0Pb-fH-mV3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EFM-bo-CzK"/>
                 <constraint firstItem="rGv-MY-0TW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="750" constant="200" id="Hmi-Nk-HBq"/>
+                <constraint firstItem="dag-Pe-iec" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="750" constant="20" id="Oxu-yW-tSR"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dag-Pe-iec" secondAttribute="trailing" constant="23" id="Zok-yv-4ww"/>
                 <constraint firstAttribute="trailing" secondItem="0Pb-fH-mV3" secondAttribute="trailing" id="gSo-t2-kWA"/>
+                <constraint firstItem="rGv-MY-0TW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dag-Pe-iec" secondAttribute="trailing" constant="-2" id="h8k-Ol-bdy"/>
                 <constraint firstItem="T1n-wA-hXq" firstAttribute="height" secondItem="0Pb-fH-mV3" secondAttribute="height" id="isP-1H-bNT"/>
                 <constraint firstAttribute="centerY" secondItem="T1n-wA-hXq" secondAttribute="centerY" id="oJa-MT-wNA"/>
                 <constraint firstItem="T1n-wA-hXq" firstAttribute="leading" secondItem="dag-Pe-iec" secondAttribute="trailing" constant="-2" id="sZ8-TI-Vhk"/>
-                <constraint firstItem="dag-Pe-iec" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="u96-Ys-INd"/>
                 <constraint firstItem="0Pb-fH-mV3" firstAttribute="centerY" secondItem="dag-Pe-iec" secondAttribute="centerY" id="vnH-fi-yay"/>
                 <constraint firstItem="rGv-MY-0TW" firstAttribute="centerY" secondItem="0Pb-fH-mV3" secondAttribute="centerY" id="vw7-RG-sCs"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rGv-MY-0TW" secondAttribute="trailing" id="xRT-Xz-YU5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="209.5" y="80"/>
+            <point key="canvasLocation" x="193.5" y="172"/>
         </view>
     </objects>
     <resources>
