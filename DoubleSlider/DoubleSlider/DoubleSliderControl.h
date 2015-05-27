@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoubleSliderControl : UIView
+@interface DoubleSliderControl : UIControl
 
 @end
