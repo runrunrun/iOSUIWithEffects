@@ -59,11 +59,10 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     // Get visible cells on table view.
-    NSArray *visibleCells = [_tableView visibleCells];
-    
+    NSArray *visibleCells = [_tableView visibleCells];    
     for (ParallaxCell *cell in visibleCells) {
-        if ([cell respondsToSelector:@selector(tableView:didScrollOnView:)]) {
-            [cell tableView:_tableView didScrollOnView:self.view];
+        if ([cell respondsToSelector:@selector(tableViewDidScroll:)]) {
+            [cell tableViewDidScroll:_tableView];
         }
     }
 }

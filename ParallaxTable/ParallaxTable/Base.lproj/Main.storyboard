@@ -30,10 +30,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="parallaxCell" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="gnL-Ls-oBy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="300" id="u51-VL-Xbi"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,6 +38,7 @@
                                                         <constraint firstItem="gnL-Ls-oBy" firstAttribute="leading" secondItem="pmJ-gv-pvb" secondAttribute="leading" id="Tc3-4S-FSR"/>
                                                         <constraint firstItem="gnL-Ls-oBy" firstAttribute="top" secondItem="pmJ-gv-pvb" secondAttribute="top" id="Tmc-wJ-jzs"/>
                                                         <constraint firstItem="gnL-Ls-oBy" firstAttribute="width" secondItem="pmJ-gv-pvb" secondAttribute="width" id="ktl-Sr-KiD"/>
+                                                        <constraint firstAttribute="height" secondItem="gnL-Ls-oBy" secondAttribute="height" id="yvR-FH-NqX"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

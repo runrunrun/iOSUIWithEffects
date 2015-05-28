@@ -12,6 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *parallaxImageView;
 
-- (void)tableView:(UITableView *)tableView didScrollOnView:(UIView *)view;
+- (void)tableViewDidScroll:(UITableView *)tableView;
 
 @end
