@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ParallaxPageDelegate <NSObject>
+
+- (void)pageControl:(UIPageControl *)control didUpdateCurrentPage:(NSInteger)currentPage;
+
+@end
+
 @interface ParallaxCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *parallaxImageView;
+@property (nonatomic, assign) id<ParallaxPageDelegate> delegate;
+@property (nonatomic, strong) NSArray *images;
+@property (nonatomic, assign) NSInteger currentPage;
 
 - (void)tableViewDidScroll:(UITableView *)tableView;
 

@@ -9,12 +9,13 @@
 #import "ViewController.h"
 #import "ParallaxCell.h"
 
-@interface ViewController ()
+@interface ViewController () <ParallaxPageDelegate>
 
 @end
 
 @implementation ViewController {
     __weak IBOutlet UITableView *_tableView;
+    NSInteger _currentPage;
 }
 
 - (void)viewDidLoad {
@@ -35,8 +36,11 @@
     UITableViewCell *cell = nil;
     if (indexPath.row == 0) {
         ParallaxCell *parallaxCell = (ParallaxCell *)[tableView dequeueReusableCellWithIdentifier:@"parallaxCell" forIndexPath:indexPath];
-        parallaxCell.parallaxImageView.image = [UIImage imageNamed:@"mountains"];
+        parallaxCell.images = @[[UIImage imageNamed:@"image1"], [UIImage imageNamed:@"image2"], [UIImage imageNamed:@"image3"], [UIImage imageNamed:@"image4"]];
+        parallaxCell.currentPage = _currentPage;
+        parallaxCell.delegate = self;
         cell = parallaxCell;
+        
     }
     else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell" forIndexPath:indexPath];
@@ -66,5 +70,10 @@
         }
     }
 }
+
+- (void)pageControl:(UIPageControl *)control didUpdateCurrentPage:(NSInteger)currentPage {
+    _currentPage = currentPage;
+}
+
 
 @end

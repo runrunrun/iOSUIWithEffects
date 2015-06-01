@@ -424,6 +424,7 @@
 				1E4F9A2B1B166FCC000D13E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E4F9A2C1B166FCC000D13E4 /* Build configuration list for PBXNativeTarget "ParallaxTableTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +433,7 @@
 				1E4F9A2E1B166FCC000D13E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

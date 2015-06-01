@@ -29,16 +29,28 @@
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmJ-gv-pvb" userLabel="Parallax View">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="parallaxCell" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="gnL-Ls-oBy">
+                                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwU-6c-Rnw">
                                                             <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
-                                                        </imageView>
+                                                            <gestureRecognizers/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="cgr-z7-GnE" id="yoN-pX-Nv2"/>
+                                                            </connections>
+                                                        </scrollView>
+                                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="WND-lI-Poz">
+                                                            <rect key="frame" x="280" y="62" width="39" height="37"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="37" id="Fi9-wH-q6s"/>
+                                                            </constraints>
+                                                        </pageControl>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="gnL-Ls-oBy" firstAttribute="leading" secondItem="pmJ-gv-pvb" secondAttribute="leading" id="Tc3-4S-FSR"/>
-                                                        <constraint firstItem="gnL-Ls-oBy" firstAttribute="top" secondItem="pmJ-gv-pvb" secondAttribute="top" id="Tmc-wJ-jzs"/>
-                                                        <constraint firstItem="gnL-Ls-oBy" firstAttribute="width" secondItem="pmJ-gv-pvb" secondAttribute="width" id="ktl-Sr-KiD"/>
-                                                        <constraint firstAttribute="height" secondItem="gnL-Ls-oBy" secondAttribute="height" id="yvR-FH-NqX"/>
+                                                        <constraint firstItem="gwU-6c-Rnw" firstAttribute="leading" secondItem="pmJ-gv-pvb" secondAttribute="leading" id="9wY-qv-XsM"/>
+                                                        <constraint firstAttribute="height" secondItem="gwU-6c-Rnw" secondAttribute="height" id="WXj-LZ-aqP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="WND-lI-Poz" secondAttribute="bottom" id="c7B-Rh-V5J"/>
+                                                        <constraint firstItem="gwU-6c-Rnw" firstAttribute="top" secondItem="pmJ-gv-pvb" secondAttribute="top" id="cNM-h7-BaA"/>
+                                                        <constraint firstAttribute="width" secondItem="gwU-6c-Rnw" secondAttribute="width" id="mfD-lG-3y1"/>
+                                                        <constraint firstAttribute="centerX" secondItem="WND-lI-Poz" secondAttribute="centerX" id="uEG-Y7-UAv"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -49,9 +61,11 @@
                                                 <constraint firstItem="pmJ-gv-pvb" firstAttribute="top" secondItem="MOF-C2-Sn6" secondAttribute="top" id="gaf-ep-faY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                         <connections>
-                                            <outlet property="_parallaxImageViewTop" destination="Tmc-wJ-jzs" id="Xjd-72-wha"/>
-                                            <outlet property="parallaxImageView" destination="gnL-Ls-oBy" id="k23-Ev-qa4"/>
+                                            <outlet property="_pageControl" destination="WND-lI-Poz" id="cby-3N-uUF"/>
+                                            <outlet property="_parallaxTop" destination="cNM-h7-BaA" id="kdm-Rl-bQI"/>
+                                            <outlet property="_scrollView" destination="gwU-6c-Rnw" id="XnM-1z-jJc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" textLabel="GNE-YM-P6b" rowHeight="44" style="IBUITableViewCellStyleDefault" id="bjb-I5-5Wa">
@@ -90,10 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266" y="323"/>
+            <point key="canvasLocation" x="94" y="163"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="mountains" width="640" height="360"/>
-    </resources>
 </document>
